@@ -2,12 +2,15 @@ import app from "./app.js"
 import {sequelize} from './database/database.js'
 
 
+const port = process.env.PORT || 5000
+
 
 async function main(){
+    
     try {
         await sequelize.sync({force: false })
-        console.log('Coneccion has been estableshed okkk')
-    app.listen("5000", console.log("server at runing on port 5000"))
+        console.log('Coneccion has been estableshed ok')
+    app.listen(port, console.log("server at runing on port", port))
     } catch (error) {
         console.log(error )
     }

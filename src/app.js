@@ -3,6 +3,7 @@ import usersRouter from "./routes/users.routes.js"
 
 const app = express()
 
+
 // middleware
 app.use(express.json())
 
